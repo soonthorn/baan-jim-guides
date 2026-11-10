@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="คู่มือติดตั้งและใช้ MakHam Voice Studio สร้างเสียงภาษาไทยด้วยเสียงหญิงและชาย ปรับความเร็ว ความดัง และฟังตัวอย่างเสียงได้">
+  <title>MakHam Voice Studio — คู่มือบ้านจิม</title>
+  <link rel="stylesheet" href="assets/fonts.css">
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#faf9f5;color:#243d35;font:16px/1.8 system-ui,Tahoma,sans-serif}h1,h2,h3,.brand{font-family:Prompt,system-ui,sans-serif}a{color:#245d50}header{border-bottom:1px solid #dfe5db;padding:18px 5%;display:flex;justify-content:space-between;gap:12px;align-items:center}.brand{color:#243d35;text-decoration:none;font:600 21px Prompt,system-ui,sans-serif}.mark{background:#245d50;color:white;padding:5px 10px;border-radius:9px;margin-right:8px}header small{color:#718174}main{max-width:960px;margin:auto;padding:42px 24px 80px}.back{font-size:14px;text-decoration:none}.eyebrow{margin:36px 0 9px;color:#6d826f;font-size:12px;font-weight:700;letter-spacing:2px}h1{font-size:clamp(32px,5vw,48px);line-height:1.3;margin:0 0 15px;font-weight:600}h2{font-size:26px;font-weight:600;margin:0 0 15px}h3{font-size:19px;margin:0 0 8px}.lead{font-size:18px;color:#5d7066;max-width:760px}.hero{padding-bottom:28px;border-bottom:1px solid #dfe5db}.buttons{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0}.button{display:inline-block;padding:10px 18px;border-radius:10px;background:#245d50;color:white;text-decoration:none;font-weight:600}.button.secondary{background:white;color:#245d50;border:1px solid #b6c9bb}section{margin-top:44px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:white;border:1px solid #dfe5db;border-radius:16px;padding:22px}.card p{margin:0 0 12px;color:#5d7066}.card audio{display:block;width:100%;margin-top:12px}.tag{display:inline-block;border-radius:20px;background:#eaf0e5;color:#245d50;padding:3px 10px;font-size:12px;font-weight:700;margin-bottom:10px}.steps{counter-reset:step;list-style:none;padding:0;margin:0}.steps li{counter-increment:step;position:relative;padding:0 0 26px 52px;min-height:48px}.steps li:before{content:counter(step);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;background:#245d50;color:white;display:grid;place-items:center;font-weight:700}.steps li+li{border-top:1px solid #e3e8e0;padding-top:20px}.steps li+li:before{top:20px}.steps strong{display:block;font-family:Prompt,system-ui,sans-serif}code,pre{font-family:Consolas,monospace}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#173b31;color:#f2f7ef;padding:18px;border-radius:12px;font-size:14px;line-height:1.65}.notice{padding:15px 18px;border-left:4px solid #b88d55;background:#f5efe4;border-radius:0 9px 9px 0}.settings{width:100%;border-collapse:collapse;background:white;border:1px solid #dfe5db}.settings th,.settings td{padding:11px 14px;border-bottom:1px solid #e6eae4;text-align:left;vertical-align:top}.settings th{background:#eaf0e5;width:32%}.faq details{background:white;border:1px solid #dfe5db;border-radius:10px;padding:12px 16px;margin-bottom:9px}.faq summary{cursor:pointer;font-weight:600}footer{border-top:1px solid #dfe5db;padding:28px 5%;text-align:center;color:#718174;font-size:13px}@media(max-width:620px){header small{display:none}main{padding:25px 16px 55px}.cards{grid-template-columns:1fr}.settings th{width:38%}.button{width:100%;text-align:center}}
+  </style>
+</head>
+<body>
+<header><a class="brand" href="./"><span class="mark">บ้านจิม</span> คู่มือบ้านจิม</a><small>เทคนิคและงานแก้ปัญหา</small></header>
+<main>
+  <a class="back" href="./">← กลับไปหน้าคู่มือทั้งหมด</a>
+  <div class="hero">
+    <p class="eyebrow">คู่มือสร้างเสียงภาษาไทย · WINDOWS</p>
+    <h1>MakHam Voice Studio</h1>
+    <p class="lead">พิมพ์ข้อความ เลือกเสียงผู้หญิงหรือผู้ชาย แล้วสร้างไฟล์เสียง WAV สำหรับเล่านิทานหรืออ่านบทความได้จากหน้าต่างเดียว</p>
+    <div class="buttons"><a class="button" href="assets/makham-voice-studio.zip" download>ดาวน์โหลดโปรแกรม (.zip)</a><a class="button secondary" href="#install">ดูวิธีติดตั้ง</a></div>
+    <p>โปรแกรมนี้ใช้ <a href="https://github.com/PyThaiNLP/PyThaiTTS">PyThaiTTS</a> และโมเดล <a href="https://huggingface.co/pythainlp/MakHamTTS">MakHamTTS</a> ของ PyThaiNLP ทำงานบนเครื่อง Windows หลังดาวน์โหลดโมเดลครั้งแรกแล้วใช้งานออฟไลน์ได้</p>
+  </div>
+
+  <section id="samples" aria-labelledby="samples-title">
+    <h2 id="samples-title">ลองฟังเสียงก่อน</h2>
+    <p>ทั้งสองเสียงอ่านข้อความเดียวกันจากนิทานปลาทอด ความเร็วปกติและไม่มีการปรับทุ้ม–แหลม</p>
+    <div class="cards">
+      <div class="card"><span class="tag">เสียงผู้หญิง</span><h3>newvoice_female</h3><p>ตัวอย่างช่วงเปิดเรื่องและบทพูดสั้น ๆ</p><audio controls preload="none" aria-label="ตัวอย่างเสียง MakHam ผู้หญิง"><source src="assets/makham-newvoice-female.mp3" type="audio/mpeg">เบราว์เซอร์นี้ไม่รองรับการเล่นเสียง</audio></div>
+      <div class="card"><span class="tag">เสียงผู้ชาย</span><h3>newvoice_male</h3><p>ตัวอย่างข้อความเดียวกันเพื่อเทียบเสียง</p><audio controls preload="none" aria-label="ตัวอย่างเสียง MakHam ผู้ชาย"><source src="assets/makham-newvoice-male.mp3" type="audio/mpeg">เบราว์เซอร์นี้ไม่รองรับการเล่นเสียง</audio></div>
+    </div>
+  </section>
+
+  <section id="install" aria-labelledby="install-title">
+    <h2 id="install-title">ติดตั้งบน Windows</h2>
+    <ol class="steps">
+      <li><strong>ติดตั้ง Python 3.11 แบบ 64 บิต</strong>ดาวน์โหลดจาก <a href="https://www.python.org/downloads/">python.org</a> แล้วเลือก “Add python.exe to PATH” ระหว่างติดตั้ง</li>
+      <li><strong>ดาวน์โหลดและแตกไฟล์โปรแกรม</strong>กดปุ่มดาวน์โหลดด้านบน แตกไฟล์ ZIP ลงในโฟลเดอร์ที่ต้องการเก็บโปรแกรม เช่น <code>Documents\MakHamVoiceApp</code></li>
+      <li><strong>ติดตั้งไลบรารี</strong>เปิด PowerShell ในโฟลเดอร์ที่มี <code>app.py</code> แล้วรันคำสั่งต่อไปนี้:<pre>python -m venv .venv
+&amp; .\.venv\Scripts\python.exe -m pip install --upgrade pip
+&amp; .\.venv\Scripts\python.exe -m pip install pythaitts==1.0.0 librosa==0.11.0</pre>หากคำสั่ง <code>python</code> ไม่พบ ให้ลอง <code>py -3.11 -m venv .venv</code> ในบรรทัดแรก</li>
+      <li><strong>เปิดโปรแกรม</strong>ดับเบิลคลิก <code>run.cmd</code> ครั้งแรกที่สร้างเสียง โปรแกรมจะดาวน์โหลดโมเดลและข้อมูลเสียงผู้พูดจาก PyThaiNLP อัตโนมัติ</li>
+    </ol>
+    <div class="notice">ต้องใช้อินเทอร์เน็ตสำหรับการติดตั้งและดาวน์โหลดเสียงครั้งแรก เตรียมพื้นที่ว่างอย่างน้อย 1 GB ไฟล์โมเดลหลักและเสียงผู้พูดสองเสียงรวมประมาณ 327 MB</div>
+  </section>
+
+  <section aria-labelledby="use-title">
+    <h2 id="use-title">วิธีสร้างไฟล์เสียง</h2>
+    <ol class="steps">
+      <li><strong>ใส่ข้อความ</strong>พิมพ์หรือวางข้อความในแท็บ “ข้อความ” หรือกด “เปิดไฟล์ .txt” เพื่อโหลดไฟล์ UTF-8</li>
+      <li><strong>เลือกเสียงและตั้งค่า</strong>เปิดแท็บ “ตั้งค่าเสียง” เลือกผู้หญิงหรือผู้ชาย แล้วปรับค่าตามต้องการ</li>
+      <li><strong>เลือกที่บันทึก</strong>ระบุชื่อไฟล์ WAV และกด “สร้างไฟล์เสียง” ข้อความยาวจะถูกแบ่งเป็นช่วงแล้วรวมเป็นไฟล์เดียว</li>
+      <li><strong>ฟังในโปรแกรม</strong>เมื่อเสร็จ กด “▶ ฟังเสียง” เพื่อฟังทันที หรือ “■ หยุด” เพื่อหยุดเล่น</li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="settings-title">
+    <h2 id="settings-title">ตั้งค่าอะไรได้บ้าง</h2>
+    <table class="settings"><tbody>
+      <tr><th>เสียง</th><td><code>newvoice_female</code> หรือ <code>newvoice_male</code></td></tr>
+      <tr><th>ความเร็ว</th><td><code>1.0×</code> คือปกติ ค่าน้อยลงพูดช้า ค่ามากขึ้นพูดเร็ว</td></tr>
+      <tr><th>ทุ้ม / แหลม</th><td>ปรับระดับเสียงหลังสังเคราะห์ ค่า <code>0</code> คือเสียงเดิม การปรับมากอาจฟังไม่เป็นธรรมชาติ</td></tr>
+      <tr><th>ความดัง</th><td><code>1.0×</code> คือเดิม การเพิ่มมากอาจทำให้เสียงแตก</td></tr>
+      <tr><th>พักระหว่างช่วง</th><td>ค่าเริ่มต้น <code>0.25</code> วินาที ขึ้นบรรทัดใหม่ในข้อความเพื่อกำหนดจังหวะพักเอง</td></tr>
+    </tbody></table>
+  </section>
+
+  <section class="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">เมื่อมีปัญหา</h2>
+    <details><summary>เปิดโปรแกรมแล้วแจ้งว่าไม่พบ Python</summary><p>ตรวจว่าแตก ZIP แล้ว และติดตั้ง Python กับไลบรารีในโฟลเดอร์เดียวกับ <code>app.py</code> โดยใช้คำสั่งในขั้นตอนติดตั้ง</p></details>
+    <details><summary>ดาวน์โหลดโมเดลไม่สำเร็จ</summary><p>ตรวจอินเทอร์เน็ตแล้วลองสร้างเสียงอีกครั้ง ไฟล์โมเดลจะอยู่ในโฟลเดอร์ <code>hf-cache</code> ข้างโปรแกรม</p></details>
+    <details><summary>ข้อความยาวแล้วสร้างเสียงไม่ได้</summary><p>แบ่งข้อความเป็นประโยคสั้น ๆ โดยขึ้นบรรทัดใหม่ที่จังหวะหยุดตามธรรมชาติ แล้วลองอีกครั้ง</p></details>
+    <details><summary>หน้าต่างเล็กจนไม่เห็นการตั้งค่า</summary><p>ใช้แท็บ “ตั้งค่าเสียง” และเลื่อนภายในแท็บ ปุ่มสร้างเสียงและฟังเสียงจะอยู่ด้านล่างของหน้าต่าง</p></details>
+  </section>
+</main>
+<footer>คู่มือบ้านจิม · คู่มือ MakHam Voice Studio สำหรับ Windows · <a href="./">กลับหน้าหลัก</a></footer>
+</body>
+</html>
+
